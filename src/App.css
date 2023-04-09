@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background-color {
+  position: absolute;
+  flex-direction: column;
+  background-image: linear-gradient(#ab69ea, #6964e9);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-card-background-color {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 92%;
+  height: 64%;
+  background-color: white;
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.main-card-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 90%;
+  height: 71%;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.woman-online-container-mobile {
+  top: 5.5rem;
+  position: relative;
+  width: 66%;
+  filter: drop-shadow(-10px 30px 4px grey);
+}
+
+.woman-online-container-desktop {
+  opacity: 0;
+  width: 0;
+}
+
+h2 {
+  align-self: center;
+  font-size: 2rem;
+}
+
+.data-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-container {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+hr {
+  width: 100%;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 93%;
+  width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.desc-hidden {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.desc-show {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.hidden-button {
+  opacity: 1;
+  width: 1rem;
+}
+
+.show-button {
+  opacity: 1;
+  width: 1rem;
+  transform: scaley(-1);
+}
+
+@media screen and (min-width: 768px) {
+  .background-color {
+    flex-direction: row;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .woman-online-container {
+    top: 0;
+  }
+
+  .woman-online-container-mobile {
+    width: 0;
+    opacity: 0;
+  }
+
+  .main-card-container {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .woman-online-container-desktop {
+    position: relative;
+    width: 40%;
+    filter: drop-shadow(-10px 30px 4px grey);
+    opacity: 1;
+  }
+
+  .main-card-background-color {
+    flex-direction: row;
+    width: 80%;
+    height: 60%;
   }
 }
